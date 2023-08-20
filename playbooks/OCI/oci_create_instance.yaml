@@ -144,7 +144,9 @@
 #            availability_domain: "{{ instance_ad }}"
             compartment_id: "{{ instance_compartment }}"
             name: "{{ instance_hostname }}"
-            image_id: "{{ instance_image }}"
+            source_details:
+              source_type: image
+              image_id: "{{ instance_image }}"
             shape: "{{ instance_shape }}"
             create_vnic_details:
                 assign_public_ip: true
