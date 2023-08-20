@@ -55,7 +55,7 @@
   tasks:
     - block:
         - set_fact:
-            SSH_AUTHORIZED_KEYS: "{{ lookup('file', './ssh/oci_id_rsa.pub') }}"
+            SSH_AUTHORIZED_KEYS: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCJGc6SbtOjwVOwKyrdUwDSSM1b4qOQwoa4j2kWtBdftVLWA7Ym6SgRwptPBhvdI4euXwpAX8wi8Clzl6guT3pGs6hrqLRH9QSeTFtpz5iw+mhzcjE3IClhyGHwOKMGa/G9l0g4QwiXvoYMuAq1VrVe6+9Fj418pPb1sGLwBk6qRgbTcFCUjEGe+mj78APPLQgaDD/degofV/YTminXi1tJzp7okOtCQIaJH8yp5JaXgKZ0qPsMmwMhW9GkTVAAeAfe/dZDSzQfZeGECOgeX+ltRH6QnSN+W5uFUB1v+CkFe32A4BU6ZbHcZ/rfZMaW1OcTB9dvfk/eAraZ9CR0mPTd rsa-key-20220705"
             
         - name: Create a VCN
           oci_network_vcn:
