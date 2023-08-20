@@ -126,7 +126,7 @@
 
         - name: Create a subnet to host the public instance. Link security_list and route_table.
           oci_network_subnet:
-            availability_domain: "{{ instance_ad }}"
+#            availability_domain: "{{ instance_ad }}"
             cidr_block: "{{ subnet_cidr }}"
             compartment_id: "{{ instance_compartment }}"
             display_name: "{{ subnet_name }}"
@@ -141,7 +141,7 @@
         
         - name: Launch an instance 
           oci_compute_instance:
-            availability_domain: "{{ instance_ad }}"
+#            availability_domain: "{{ instance_ad }}"
             compartment_id: "{{ instance_compartment }}"
             name: "{{ instance_hostname }}"
             image_id: "{{ instance_image }}"
